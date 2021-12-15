@@ -10,9 +10,9 @@
 #+begin_src python :results output
 import re
 
-phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-mo = phoneNumRegex.search('My number is 415-555-4242.')
-print('Phone number found: ' + mo.group())
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')   # Creating a variable with the format of a phone number in RegEx
+mo = phoneNumRegex.search('My number is 415-555-4242.') # Function to search a piece of text for a phone number
+print('Phone number found: ' + mo.group())              # Print result of function with any phone numbers found
 #+end_src
 
 #+RESULTS:
