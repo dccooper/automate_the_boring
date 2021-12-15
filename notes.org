@@ -1,14 +1,18 @@
 #+TITLE: Notes from Automate the Boring Stuff
 #+AUTHOR: David Cooper
+#+PROPERTY: header-args: python :results output
 
 
 * Chapter 7 - Pattern Matching with RegEx
+** Helpful links
+[[https://medium.com/factory-mind/regex-cookbook-most-wanted-regex-aa721558c3c1][10 most wanted RegEx]]
+
 ** Matching RegEx Objects
 "A Regex object’s search() method searches the string it is passed for any matches to the regex. The search() method will return None if the regex pattern is not found in the string. If the pattern is found, the search() method returns a Match object. Match objects have a group() method that will return the actual matched text from the searched string."
 
 #+NAME: Creating RegEx Objects
 #+begin_src python :results output
-import re
+import re  # Import the RegEx Library
 
 phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')   # Creating a variable with the format of a phone number in RegEx
 mo = phoneNumRegex.search('My number is 415-555-4242.') # Function to search a piece of text for a phone number
@@ -17,3 +21,6 @@ print('Phone number found: ' + mo.group())              # Print result of functi
 
 #+RESULTS:
 : Phone number found: 415-555-4242
+
+** TODO Update work machine config with new packages
+** TODO Add org-tempo for src templates for python
