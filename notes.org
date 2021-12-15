@@ -1,0 +1,19 @@
+#+TITLE: Notes from Automate the Boring Stuff
+#+AUTHOR: David Cooper
+
+
+* Chapter 7 - Pattern Matching with RegEx
+** Matching RegEx Objects
+"A Regex object’s search() method searches the string it is passed for any matches to the regex. The search() method will return None if the regex pattern is not found in the string. If the pattern is found, the search() method returns a Match object. Match objects have a group() method that will return the actual matched text from the searched string."
+
+#+NAME: Creating RegEx Objects
+#+begin_src python :results output
+import re
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phoneNumRegex.search('My number is 415-555-4242.')
+print('Phone number found: ' + mo.group())
+#+end_src
+
+#+RESULTS:
+: Phone number found: 415-555-4242
